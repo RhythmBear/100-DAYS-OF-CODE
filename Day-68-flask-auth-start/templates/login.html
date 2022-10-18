@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="box">
+    <h1>Login</h1>
+    {% with messages = get_flashed_messages(category_filter=['password_error']) %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% with messages = get_flashed_messages(category_filter=['register']) %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="success">{{ message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% with messages = get_flashed_messages(category_filter=['info']) %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="warning">{{ message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+    {% with messages = get_flashed_messages(category_filter=['email_error']) %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+
+    {% endwith %}
+    <form action="{{ url_for('login') }}" method="post">
+        <input type="text" name="email" placeholder="Email" required="required"/>
+        <input type="password" name="password" placeholder="Password" required="required"/>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    </form>
+</div>
+
+{% endblock %}
