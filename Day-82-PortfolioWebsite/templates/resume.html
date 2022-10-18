@@ -1,0 +1,89 @@
+<!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Resume</h2>
+        <p>Check My Resume</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">Sumary</h3>
+
+          <div class="resume-item pb-0">
+            <h4>Emmanuel Adepoju</h4>
+            <p><em>Innovative and deadline-driven Developer with 3+ years of experience of building software programs
+              and working with Data from initial concept to final, polished deliverable.</em></p>
+            <p>
+              <ul>
+                <li>Ibadan, OY, NgR</li>
+                <li>(234) 8030-4532</li>
+                <li>femiemmanuel1990@gmail.com</li>
+              </ul>
+            </p>
+          </div>
+
+          <h3 class="resume-title">Education</h3>
+
+<!--          Loop through th resume Items and Add the Educational Category Version-->
+          {% if resume %}
+          {% for item in resume %}
+            {% if item.category == 'Education' %}
+              <div class="resume-item">
+                  <h4>{{ item.title  }}</h4>
+                  <h5>{{ item.start_month }} {{ item.start_year }} -
+                    {% if item.end_month %}
+                     {{ item.end_month }} {{ item.end_year }}
+                    {% else %}
+                     <p>Present </p>
+                    {% endif %}
+                  </h5>
+                  <p><em>{{ item.organization }}</em></p>
+                  <p>{{ item.details }}</p>
+              </div>
+
+
+            {% endif %}
+          {% endfor %}
+
+          {% else %}
+                <h4>No Education History Yet.</h4>
+          {% endif %}
+        </div>
+
+        <div class="col-lg-6">
+          <h3 class="resume-title">Professional Experience</h3>
+          {% if resume %}
+          {% for item in resume %}
+            {% if item.category == 'Work Experience' %}
+
+
+              <div class="resume-item">
+                <h4>{{ item.title }}</h4>
+                <h5>{{ item.start_month }} {{ item.start_year }} -
+                    {% if item.end_month %}
+                     {{ item.end_month }} {{ item.end_year }}
+                    {% else %}
+                     <p>Present </p>
+                    {% endif %}</h5>
+                <p><em>{{ item.organization }} </em></p>
+                <p>
+                <ul>
+                  {{ item.details | safe }}
+                </ul>
+                </p>
+              </div>
+
+
+            {% endif %}
+          {% endfor %}
+          {% else %}
+                <h4>No Employment History Yet.</h4>
+
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Resume Section -->

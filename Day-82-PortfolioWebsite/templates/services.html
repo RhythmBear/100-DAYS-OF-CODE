@@ -1,0 +1,41 @@
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>My Services</p>
+      </div>
+
+
+
+      <div class="row">
+        {% for ser in service %}
+        <div class="col-lg-4 col-md-6 align-items-center mb-2 pb-2 ">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+            <h4><a href="">{{ ser.service }}</a></h4>
+            <p>{{ ser.description }}</p>
+          </div>
+        </div>
+
+        {% endfor %}
+<!--        {% for ser in service %}-->
+<!--        <div class="col-lg-4 col-md-6 align-items-center mb-2 ">-->
+<!--          <div class="icon-box">-->
+<!--            <div class="icon"><i class="bx bxl-dribbble"></i></div>-->
+<!--            <h4><a href="">{{ ser.service }}</a></h4>-->
+<!--            <p>{{ ser.description }}</p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+        {% endfor %}
+
+
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+

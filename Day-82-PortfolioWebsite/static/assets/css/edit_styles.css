@@ -1,0 +1,33 @@
+
+.title-log {
+    color: white;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.login_form {
+    text-align: left
+}
+
+.login_header {
+    padding: 20px;
+    color: white;
+    line-height: 1.5;
+}
+
+.login-row {
+    text-align: center;
+    margin: 4rem auto auto;
+}
+
+.login-title {
+    color: #000;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}

@@ -1,0 +1,78 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %} Edit Portfolio {% endblock %}
+
+{% block styles %}
+<link href="static/assets/img/favicon.png" rel="icon">
+<link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&family=Ubuntu&display=swap"
+      rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+<link href="static/assets/css/style.css" rel="stylesheet">
+<link href="static/assets/css/edit_styles.css" rel="stylesheet">
+
+{% endblock %}
+
+{% block body %}
+
+
+<header>
+
+    <div class="login_header">
+        <a href="{{ url_for('home') }}"><h1 class="title-log">Emmanuel Adepoju</h1></a>
+    </div>
+</header>
+
+
+<div class="container">
+    <div class="row justify-content-center login-row">
+        <div class="col-6 col-lg-4 col-6">
+            <h2>
+                WELCOME BACK! <br>
+                <hr>
+            </h2>
+            <!--        FlASH MESSAGES -->
+            {% with messages = get_flashed_messages(category_filter=['wrong password', 'wrong username', 'logout']) %}
+            {% if messages %}
+            {% for msg in messages %}
+            <p class="error">{{ msg }}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            <div class="login_form">
+                {{ wtf.quick_form(login_form, button_map={'submit': 'btn-lg btn-info'}) }}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Vendor JS Files -->
+<script src="static/assets/vendor/purecounter/purecounter.js"></script>
+<script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="static/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="static/assets/js/main.js"></script>
+
+{% endblock %}
