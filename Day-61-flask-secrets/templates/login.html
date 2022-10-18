@@ -1,0 +1,46 @@
+<!--<!DOCTYPE HTML>-->
+
+<!--<html>-->
+<!--	<head>-->
+<!--		<title>Login</title>-->
+<!--	</head>-->
+<!--	<body>-->
+<!--        <div class="container">-->
+<!--			<h1>Login</h1>-->
+<!--			&lt;!&ndash; This is where our form will go. &ndash;&gt;-->
+<!--			&lt;!&ndash; First we create a form tag where we can display the form class that was passed in in the 'main.py'-->
+<!--						section then we specify what was used pass in all the attributes through a paragraph tag&ndash;&gt;-->
+<!--			{% if message %}-->
+<!--				<h1> YOU ARE LOGGED IN</h1>-->
+<!--			{% else %}-->
+<!--				<h1> PLEASE LOG IN</h1>-->
+<!--				<form method="post" action="{{ url_for('login') }}">-->
+
+<!--					<div>{{ form.hidden_tag() }} </div>-->
+<!--					<p>-->
+<!--						&lt;!&ndash; The loop is used to check for errors and make sure all the requirements are met					&ndash;&gt;-->
+<!--						{{ form.username.label }}: <br> {{ form.username(class="css_class") }}-->
+<!--					</p>-->
+
+<!--					<p>-->
+
+<!--						{{ form.password.label }}: <br> {{ form.password() }}-->
+<!--					</p>-->
+<!--						{{ form.login() }}-->
+<!--				</form>-->
+<!--			{% endif %}-->
+<!--        </div>-->
+<!--	</body>-->
+<!--</html>-->
+
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block title %}LOGIN{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1>LOGIN</h1>
+		{{ wtf.quick_form(form) }}
+	</div>
+{% endblock %}
