@@ -1,0 +1,25 @@
+body {
+  background-color: #D49B54;
+
+}
+
+h1 {
+  color: #46244C;
+  font-size: 100px
+}
+
+p {
+  font-size: 20px;
+}
+
+
+img:hover {
+  background-color: red;
+}
+
+
+/*********************CLASS SELECTORS******************************/
+
+.bacon {
+  background-color: blue;
+}
