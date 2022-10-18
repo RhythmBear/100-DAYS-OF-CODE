@@ -1,0 +1,159 @@
+a {
+  color: #11999E;
+  margin: 20px;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+hr {
+  width: 5%;
+  border-style: dotted none none;
+  border-color: white;
+  height: 0;
+  border-top: 5px dotted #EAF6F6;
+  margin: 50px auto;
+}
+
+h1 {
+  font-size: 5.625rem;
+  margin: : 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  color: #66BFBF;
+  line-height: 2;
+}
+
+h2 {
+  margin: 20px auto;
+  color: #66BFBF;
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+h3 {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+}
+
+div {
+
+}
+
+/************************CLASS SELECTORS*************************/
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #11999E;
+  outline: 2px solid #11999E;
+  padding: 8px 16px;
+  position: relative;
+  overflow: hidden;
+  transition: color 1s;
+  margin: 50px;
+  border-radius: 5%;
+}
+.btn:hover{
+  color: white;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0;
+  height: 100%;
+  background-color: #11999E;
+
+  z-index: -1;
+  transition: width 1s;
+
+}
+
+.btn:hover::before {
+  width: 100%;
+
+}
+
+.contact-me {
+  line-height: 2;
+  margin: 50px auto 50px auto
+}
+
+
+.top {
+  background-color: #EBFFFB;
+  position: relative;
+  padding-top: 80px;
+}
+
+.middle-container {
+  padding: 50px;
+}
+
+.bottom-container {
+  top-margin: 20px;
+  line-height: 2;
+  background-color: #AEFEFF;
+  padding: 20px;
+}
+
+.topic {
+  background-color: #EBFFFB;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 400px;
+  top: 20px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 400px;
+  bottom: 300px;
+}
+
+.music {
+  width: 25%;
+  float: right  ;
+  margin-left: 30px;
+}
+
+.Coding {
+  border-radius: 100%;
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.footer-text {
+  padding: 100px auto 10px auto;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.profile-pic {
+  margin: 20px auto;
+
+}
+.profile {
+  width: 50%;
+  margin: 50px auto 50px auto;
+  line-height: 2;
+
+}
