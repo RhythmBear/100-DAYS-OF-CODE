@@ -1,0 +1,20 @@
+body {
+background-color: #333;
+}
+
+label, h2, h3, h4 {
+    color: #ffc107;
+}
+
+a {
+    text-decoration: None;
+}
+
+.btn {
+    margin: 10px 0px;
+}
+
+.container {
+    margin: 20px 0px;
+}
+
