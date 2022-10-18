@@ -7,7 +7,7 @@ Starting from : December 15, 2021
 </h5>
 
 <p align="center">
-I <a href="https://raw.githubusercontent.com/ashutoshkrris/100-Days-of-Python/master/Course-Pledge.jpg">pledge</a> to complete this 100 days of coding challenge.
+Proffesional Python Developer Bootcamp by Dr Anjela Yu
 </p>
 
 ## Contents
