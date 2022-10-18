@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    {% for topic in topics: %}
+        {% if topic['id'] == 2: %}
+            <h1>{{ topic['title'] }}</h1>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
