@@ -3,7 +3,8 @@ import datetime as dt
 # Creating the User's Profile
 
 pixela_endpoint = "https://pixe.la/v1/users"
-pixela_token = "Okechukwu"
+# Set pixela token in enviroment variabe=les before running.
+pixela_token = os.getenv('pixela_token')
 pixela_username = "rhythmbear"
 
 pixela_params = {
