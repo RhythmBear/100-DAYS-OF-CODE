@@ -124,8 +124,6 @@ Last Updated : October 18, 2022
 <p align="center">
 Please ⭐ this repository if you loved it !
 <br>
-< Happy Coding />
-<br>
 <b>Adepoju Emmanuel<b>
 <br>
 <a href="https://twitter.com">Twitter</a> | <a href="https://github.com/RhythmBear">Github</a> | <a href="https://emmanueladepoju.hashnode.dev/">Hashnode</a>
